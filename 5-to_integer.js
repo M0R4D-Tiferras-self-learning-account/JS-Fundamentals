@@ -7,7 +7,7 @@ function is_valid(str) {
 		if ((str[idx] >= '0' && str[idx] <= '9') || str[idx] == '-') {
 			idx++
 		} else {
-			break;
+			return false;
 		}
 	}
 	return true;
@@ -17,6 +17,6 @@ if (process.argv.length == 2) {
 	console.log("Not a number")
 } else if (is_valid(process.argv[2]) === false) {
 	console.log("Not a number")
-} else {
+} else if (is_valid(process.argv) === true) {
 	console.log("My number:", process.argv[2])
 }

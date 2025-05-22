@@ -4,10 +4,11 @@ function is_valid(str) {
 	let idx = 0
 	while (str[idx] !== undefined)
 	{
-		if (str[idx] < '0' || str[idx] > '9') {
-			return false;
+		if ((str[idx] >= '0' && str[idx] <= '9') || str[idx] == '-') {
+			idx++
+		} else {
+			break;
 		}
-		idx++
 	}
 	return true;
 }

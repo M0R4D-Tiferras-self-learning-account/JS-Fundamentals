@@ -1,6 +1,14 @@
 #!/usr/bin/node
 
-let argc = process.argv.length;
+function calculateLength(arr) {
+	let count = 0;
+	while (arr[count] !== undefined) {
+		count++;
+	}
+	return count;
+}
+
+let argc = calculateLength(process.argv);
 
 if (argc === 2) {
 	console.log("No argument")

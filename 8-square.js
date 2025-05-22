@@ -15,22 +15,14 @@ function is_valid(str) {
 	return true;
 }
 
-function is_negative(str) {
-	let idx = 0;
-	while (idx < str.length) {
-		if (str[idx] === '-') {
-			return true;
-		}
-		idx++
-	}
-	return false;
-}
-
 function main() {
 	if (argc != 3) {
 		console.log("Missing size")
 	} else if (argc === 3) {
-		if (is_negative(process.argv[2]) === true) {
+		if (is_valid(process.argv[2]) == false) {
+			if (process.argv[2][0] !== '-') {
+				console.log("Missing size");
+			}
 			return;
 		}
 		else if (is_valid(process.argv[2] === true)) {
@@ -48,8 +40,6 @@ function main() {
 				result = "";
 				row++;
 			}
-		} else {
-			console.log("Missing size");
 		}
 	}
 }

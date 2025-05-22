@@ -17,6 +17,6 @@ if (process.argv.length == 2) {
 	console.log("Not a number")
 } else if (is_valid(process.argv[2]) === false) {
 	console.log("Not a number")
-} else if (is_valid(process.argv) === true) {
+} else if (is_valid(process.argv[2]) == true) {
 	console.log("My number:", process.argv[2])
 }
